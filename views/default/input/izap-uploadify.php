@@ -20,7 +20,7 @@
  */
 
 
-elgg_load_js('izap-uploadify');
+
 
 
 $uniqueId = md5(time() . session_id());
@@ -49,7 +49,7 @@ $uniqueId = md5(time() . session_id());
   <div class="readout">
     <span class="mb_uploaded">0</span>/<span class="mb_total_size">0</span> MB - <span class="kb_average">0</span> kb/sec <br/><span class="time">0</span> <b><?php elgg_echo('izap-uploadify:remaining');?></b>
   </div>
-  <div style="background: <?php echo izap_get_progress_bar_settings('progressbar_background_color');?>;border:2px solid #FFFFFF;">
+  <div style="background: <?php echo izap_get_progress_bar_settings('progressbar_background_color');?>;border:2px solid #000;">
     <div class="meter"></div>
     <div class="clearfloat"></div>
   </div>
