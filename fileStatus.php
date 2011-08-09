@@ -28,7 +28,7 @@ function izapBytesToMB($size = 0, $str = 'str') {
     return $bytes . 'b';
 }
 
-$upload_id = $_REQUEST['upload_id'];
+c($upload_id = $_REQUEST['upload_id']);
 if ($upload_id) {
   $data = uploadprogress_get_info($upload_id);
   if (!$data)

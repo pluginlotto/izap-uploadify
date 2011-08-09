@@ -21,7 +21,7 @@
 
 
 
-
+//echo izap_get_progress_bar_settings('progressbar_background_color');exit;
 
 $uniqueId = md5(time() . session_id());
 ?>
@@ -44,12 +44,12 @@ $uniqueId = md5(time() . session_id());
   });
 </script>
 <input type="hidden" name="APC_UPLOAD_PROGRESS" value="<?php echo $uniqueId?>">
-<input type="file" name="<?php echo $vars['internalname']?>" id="file" >
+<input type="file" name="<?php echo $vars['internalname']?>" id=<?php echo $vars['internalid']?> >
 <div class="upload-progress" id="uploadProgress" style="display:none;">
   <div class="readout">
     <span class="mb_uploaded">0</span>/<span class="mb_total_size">0</span> MB - <span class="kb_average">0</span> kb/sec <br/><span class="time">0</span> <b><?php elgg_echo('izap-uploadify:remaining');?></b>
   </div>
-  <div style="background: <?php echo izap_get_progress_bar_settings('progressbar_background_color');?>;border:2px solid #000;">
+  <div style="background: <?php echo izap_get_progress_bar_settings('progressbar_background_color');?>;border:2px solid #fff; height:<?php echo izap_get_progress_bar_settings('progressbar_height');?>">
     <div class="meter"></div>
     <div class="clearfloat"></div>
   </div>
