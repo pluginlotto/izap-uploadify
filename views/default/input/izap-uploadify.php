@@ -33,6 +33,8 @@ $uniqueId = md5(time() . session_id());
       progressURL:'<?php echo $vars['url']?>mod/izap-uploadify/fileStatus.php',
       displayFields : ['mb_uploaded','kb_average','time', 'mb_total_size'],
       waitText : '<?php elgg_echo('izap-uploadify:uploading_wait');?>',
+//      debugDisplay: true,
+updateDelay:10,
       start: function() {
         $('#uploadProgress').toggle();
       },
