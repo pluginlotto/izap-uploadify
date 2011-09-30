@@ -18,7 +18,7 @@
 	width:1px;
 	height:<?php echo izap_get_progress_bar_settings('progressbar_height');?>;
 	background-color:<?php echo izap_get_progress_bar_settings('progressbar_foreground_color');?>;
-	margin:1px;
+<!--	margin:1px;-->
 }
 
 .upload-progress div.readout {

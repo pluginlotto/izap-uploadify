@@ -10,7 +10,7 @@
  * Under this agreement, No one has rights to sell this script further.
  * For more information. Contact "Tarun Kumar<tarun@izap.in>"
  */
-
+if (elgg_is_active_plugin(GLOBAL_IZAP_ELGG_BRIDGE))
 elgg_register_event_handler('init', 'system', 'init_izap_uploadify');
 define('GLOBAL_IZAP_UPLOADIFY_PLUGIN', 'izap-uploadify');
 
@@ -25,10 +25,9 @@ function init_izap_uploadify() {
   elgg_extend_view('css/screen', 'izap-uploadify/css');
 
   // lets register some actions
-  //elgg_register_action('izap-uploadify/upload', $CONFIG->pluginspath . GLOBAL_IZAP_UPLOADIFY_PLUGIN . '/actions/izap-uploader.php');
   elgg_register_js('izap-uploadify', 'mod/' . GLOBAL_IZAP_UPLOADIFY_PLUGIN . '/vendors/jquery.progress.js');
   elgg_load_js('izap-uploadify');
-//c($CONFIG);
+
 }
 
 function izapGetUploadedFiles_izap_uploadify() {

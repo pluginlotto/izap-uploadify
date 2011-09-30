@@ -31,6 +31,7 @@ jQuery.fn.extend({
       success:function(){},
       failed:function(){}
     },c);
+   
   uploadProgressSettings[c.id]=c;
   jQuery(this).submit(function(){
     if(uploadProgressActive[c.id]){
