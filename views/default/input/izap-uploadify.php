@@ -21,7 +21,6 @@
 
 
 
-
 $uniqueId = md5(time() . session_id());
 ?>
 <script type="text/javascript">
